@@ -1,0 +1,14 @@
+<div id="app-header">
+  <form id="when-not-connected" *ngIf="!loginService.isLogged">
+    <input pInputText name="userName" type="test" placeholder="Nom d'utilisateur" [(ngModel)]="userName" autofocus/>
+    <input pPassword name="password" type="password" placeholder="Mot de passe" [(ngModel)]="password" [feedback]="false"/>
+    <button pButton type="submit" label="Se connecter" (click)="login()"></button>
+  </form>
+
+  <div id="when-connected" *ngIf="loginService.isLogged">
+    <div ng-if="loginUiService.profile">Connecté en tant que {{loginService.userName ? loginService.userName: 'Inconnu'}}</div>
+    <button pButton type="submit" label="Se déconnecter" (click)="logout()"></button>
+  </div>
+
+</div>
+

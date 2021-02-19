@@ -1,0 +1,22 @@
+:host {
+  #app-header {
+    height: 3rem;
+    position: relative;
+  }
+
+  #when-connected {
+    div {
+      padding-top: 0.9rem;
+      float: left
+    }
+  }
+
+  input {
+    margin-right: 1rem;
+  }
+
+  button {
+    float: right;
+    margin-right: 2rem;
+  }
+}
